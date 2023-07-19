@@ -30,7 +30,8 @@ pathfinder_geometry = "0.5"
 pathfinder_simd = "0.5.1"
 
 [dependencies.freetype]
-version = "0.7"
+git = "https://github.com/cellfusion/rust-freetype.git"
+branch = "master"
 optional = true
 
 [dependencies.yeslogic-fontconfig-sys]
@@ -56,7 +57,7 @@ core-graphics = "0.22"
 core-text = "19.1.0"
 
 [target.'cfg(not(any(target_family = "windows", target_os = "macos", target_os = "ios")))'.dependencies]
-freetype = "0.7"
+freetype = { git = "https://github.com/cellfusion/rust-freetype.git", branch = "master" }
 
 [target.'cfg(not(any(target_family = "windows", target_os = "macos", target_os = "ios", target_arch = "wasm32")))'.dependencies]
 yeslogic-fontconfig-sys = "3.0.0"
