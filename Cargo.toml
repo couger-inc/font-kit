@@ -52,9 +52,9 @@ version = "0.3"
 features = ["dwrite", "minwindef", "sysinfoapi", "winbase", "winnt"]
 
 [target.'cfg(any(target_os = "macos", target_os = "ios"))'.dependencies]
-core-foundation = "0.10"
-core-graphics = "0.24"
-core-text = "21.0.0"
+core-foundation = { git = "https://github.com/servo/core-foundation-rs.git", version = "0.10", rev = "cf4c9c06c50ac259036fe2087353a6fef8cf0d27" }
+core-graphics = { git = "https://github.com/servo/core-foundation-rs.git", version = "0.24", rev = "cf4c9c06c50ac259036fe2087353a6fef8cf0d27" }
+core-text = { git = "https://github.com/servo/core-foundation-rs.git", version = "21.0.0", rev = "cf4c9c06c50ac259036fe2087353a6fef8cf0d27" }
 
 [target.'cfg(not(any(target_family = "windows", target_os = "macos", target_os = "ios")))'.dependencies]
 freetype = { git = "https://github.com/couger-inc/rust-freetype.git", branch = "master" }
